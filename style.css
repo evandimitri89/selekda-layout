@@ -214,6 +214,7 @@ section {
 .about-container .left-about {
   width: 30rem;
 }
+
 .about-container .left-about button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
@@ -226,13 +227,39 @@ section {
   border-radius: 12px;
 }
 
+/* Project */
 .project {
-  padding: 7rem 4rem 0;
-  max-height: 100vw;
+  padding: 8rem 4rem 0;
+  max-height: 100vh;
+  max-width: 100vw;
 }
 
 .project h1 {
   text-align: center;
   font-size: 2em;
   padding-bottom: 2rem;
+}
+
+.project .card-project-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project .card-project-container .card-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.project .card-project-container .card-project img {
+  width: 100%;
+}
+
+.project .card-project-container .card-container .card-content {
+  background-color: var(--element-color);
+  padding: 2rem;
+}
+.project .card-project-container .card-container {
+  padding: 1rem 1rem;
 }
