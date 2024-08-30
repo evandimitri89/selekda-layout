@@ -44,3 +44,23 @@ dots.forEach((li, key) => {
 window.onresize = function (event) {
   reloadSlider();
 };
+
+// Theme Function
+const body = document.querySelector("body");
+
+// Add Class
+toggle.addEventListener("click", () => {
+  body.classList.toggle("darkmode");
+  if (!body.classList.contains("darkmode")) {
+    return localStorage.setItem("theme", "lightmode");
+  }
+  localStorage.setItem("theme", "darkmode");
+});
+
+toggle.addEventListener("click", () => toggle.classList.toggle("active"));
+
+// Local Storage
+let getTheme = localStorage.getItem("theme");
+if (getTheme && getTheme === "darkmode") {
+  body.classList.add("darkmode");
+}
