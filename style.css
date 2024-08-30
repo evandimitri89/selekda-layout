@@ -237,29 +237,58 @@ section {
 .project h1 {
   text-align: center;
   font-size: 2em;
-  padding-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project .card-project-container {
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.project .card-project-container .card-project {
+.project .content {
+  width: 20%;
+  margin: 2rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  gap: 3rem;
+}
+
+.project .content .card {
+  width: 22rem;
+  flex: 1 1 250px;
+  padding: 1.4rem;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 0.8rem;
+  background-color: var(--primary-color);
+}
+
+.project .content .card .card-content {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.project .card-project-container .card-project img {
+.project .content .card .card-img {
+  height: 12rem;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+.project .content .card .card-img img {
+  transition: ease-in 0.2s;
+}
+
+.project .content .card .card-img:hover img {
+  transform: scale(1.5);
+}
+
+.project .content .card .card-img img {
   width: 100%;
 }
 
-.project .card-project-container .card-container .card-content {
-  background-color: var(--element-color);
-  padding: 2rem;
-}
-.project .card-project-container .card-container {
-  padding: 1rem 1rem;
+.project .content .card .card-img {
+  background-color: #2b3968;
 }
